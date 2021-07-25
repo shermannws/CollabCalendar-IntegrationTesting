@@ -1,5 +1,5 @@
 require('dotenv').config()
-const puppeteer = require('puppeteer-core');
+const puppeteer = require('puppeteer');
 const expect = require('expect-puppeteer');
 
 const SignInTest = require('./sign-in-test');
@@ -12,7 +12,6 @@ expect.setDefaultOptions({ timeout: 5000 });
 
     //Launch Puppeteer
     const browser = await puppeteer.launch({
-        executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
         args: ['--incognito'],
         headless: false,
         args:[
